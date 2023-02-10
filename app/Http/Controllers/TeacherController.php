@@ -2,73 +2,75 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Journal;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
-class JournalController extends Controller
+class TeacherController extends Controller
 {
     public function index()
     {
-        $journals = Journal::all();
-        return view('journals.index', compact('journals'));
+        $teachers = Teacher::all();
+        return view('teachers.index', compact('teachers'));
     }
 
     public function create()
     {
-        return view('journals.create');
+        return view('teachers.create');
     }
 
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
+            'experience'=>'required',
             'description' => 'required',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5140',
         ]);
-        $journal = Journal::create($request->all());
+        $Teacher = Teacher::create($request->all());
         if ($request->hasFile('photos')) {
             foreach ($request->photos as $photo) {
                 $path = $photo->store('photos',['disk' => 'public']);
-                $journal->photos()->create(['path' => $path]);
+                $Teacher->photos()->create(['path' => $path]);
             }
         }
 
-        return redirect()->route('journals.index');
+        return redirect()->route('teachers.index');
     }
 
-    public function show(Journal $journal)
+    public function show(Teacher $teacher)
     {
-        return view('journals.show', compact('journal'));
+        return view('teachers.show', compact('teacher'));
     }
 
-    public function edit(Journal $journal)
+    public function edit(Teacher $teacher)
     {
-        return view('journals.edit', compact('journal'));
+        return view('teachers.edit', compact('teacher'));
     }
 
-    public function update(Request $request, Journal $Journal)
+    public function update(Request $request, Teacher $teacher)
     {
         $request->validate([
             'name' => 'required',
+            'experience'=>'required',
             'description' => 'required',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5140',
         ]);
-        $Journal->update($request->all());
+        $Teacher->update($request->all());
 
         if ($request->hasFile('photos')) {
             foreach ($request->photos as $photo) {
                 $path = $photo->store('photos');
-                $Journal->photos()->create(['path' => $path]);
+                $Teacher->photos()->create(['path' => $path]);
             }
         }
 
-        return redirect()->route('journals.index');
+        return redirect()->route('teachers.index');
     }
 
-    public function destroy(Journal $Journal)
+    public function destroy(Teacher $Teacher)
     {
-        $Journal->delete();
-        return redirect()->route('journals.index');
+        $Teacher->delete();
+        return redirect()->route('teachers.index');
     }
 
 }

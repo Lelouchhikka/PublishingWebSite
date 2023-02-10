@@ -21,6 +21,11 @@ Route::put('photos/{photo}', [\App\Http\Controllers\PhotoController::class,'upda
 Route::delete('photos/{photo}',[\App\Http\Controllers\PhotoController::class,'destroy'])->name('photos.destroy');
 Route::resource('/students', StudentController::class);
 Route::resource('/journals', \App\Http\Controllers\JournalController::class);
+Route::resource('/teachers', \App\Http\Controllers\TeacherController::class);
 Route::get('/', function () {
     return view('welcome');
-});
+})->name("home");
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

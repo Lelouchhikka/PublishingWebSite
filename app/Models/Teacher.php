@@ -9,9 +9,9 @@ class Teacher extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name'=>'require',
-        'experience'=>'require',
-        'description'=>'require',
+        'name',
+        'experience',
+        'description',
     ];
     public function photos()
     {
