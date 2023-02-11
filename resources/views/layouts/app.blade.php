@@ -11,12 +11,13 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/custom.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/a37e49b39b.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css">
     <link href="{{ asset('css/custom.css') }}" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -62,31 +63,45 @@
                     @endguest
                 </ul>
                     <!-- Right Side Of Navbar -->
-
-            </div>
-        </nav>
-        <div class="img_home">
-            <nav class="navbar navbar-expand-lg navbar-light fw-bold">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+            </div>
+        </nav>
+        <div class="img_home">
+            <div class="logo_asylmura">
+                <img class="logo_asylmura" src="{{url("/images/logo.png")}}"/>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light fw-bold">
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item  ">
-                            <a class="nav-link item_img" href="#">ГЛАВНАЯ</a>
+                            <a class="nav-link item_img" href="{{route('home')}}">ГЛАВНАЯ</a>
                         </li>
                         <li class="nav-item  ">
-                            <a class="nav-link item_img" href="#">ЛУЧШИЕ УЧИТЕЛЯ</a>
+                            <a class="nav-link item_img" href="{{route('teachers')}}">ЛУЧШИЕ УЧИТЕЛЯ</a>
                         </li>
                         <li class="nav-item  ">
-                            <a class="nav-link item_img" href="#">УЧЕНИКИ</a>
+                            <a class="nav-link item_img" href="{{route('students')}}">УЧЕНИКИ</a>
                         </li>
                         <li class="nav-item  ">
-                            <a class="nav-link item_img" href="#">ВЫПУСКИ</a>
+                            <a class="nav-link item_img" href="{{route('journals')}}">ВЫПУСКИ</a>
                         </li>
                         <li class="nav-item  ">
-                            <a class="nav-link item_img" href="#">КОНТАНКТЫ</a>
+                            <a class="nav-link item_img" href="{{route('about')}}">КОНТАНКТЫ</a>
                         </li>
+                        @if(Auth::check())
+                            <li class="nav-item  ">
+                                <a class="nav-link item_img" href="{{url('admin/'.'students')}}">Добавить студента</a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a class="nav-link item_img" href="{{url('admin/'.'journals')}}">Добавить выпуск</a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a class="nav-link item_img" href="{{url('admin/'.'teachers')}}">Добавить учителя</a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </nav>
@@ -95,6 +110,8 @@
         <main class="py-4 bg-default">
             @yield('content')
         </main>
+
     </div>
+    @include('layouts.footer')
 </body>
 </html>

@@ -4,34 +4,48 @@
     text-align: center;
 }
 body{
-    background: #9ab3c2;
+    background: #edccc3;
 }
 .bg-nav{
-    background-color: #7c67a6;
+    background-color: #eddddd;
 }
 .navbar-nav {
     display: flex;
     justify-content: center;
 }
+.slides-container {
+    display: flex;
+}
 
+.slide {
+    width: 25%; /* adjust to fit 4 slides in one row */
+    padding: 10px;
+    box-sizing: border-box;
+}
 @media (max-width: 767px) {
     .navbar-nav {
         display: none;
     }
 }
 
-.item_img{
+.logo_asylmura{
+    height: 150px;
+    width: 150px;
 }
-
 .img_home{
     width: 100%;
     height: 300px;
     display: flex;
-    align-items: end;
+    flex-flow: column;
+    align-items: center;
     justify-content: center;
-    /*background-image: url('/images/books.jpg');*/
-    background-color: #7d82b8;
+    text-align: end;
+    background-image: url('/images/books.jpeg');
     object-fit: cover;
+}
+.separator{
+    font-size: large;
+
 }
 .separator::before,
 .separator::after {
@@ -47,3 +61,18 @@ body{
 .separator:not(:empty)::after {
     margin-left: .25em;
 }
+
+
+.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+.MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+.MultiCarousel .MultiCarousel-inner .item { float: left;}
+.MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+.MultiCarousel .leftLst { left:0; }
+.MultiCarousel .rightLst { right:0; }
+
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+
+
+
+
