@@ -34,6 +34,7 @@ Auth::routes([
 ]);
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/teachers', [App\Http\Controllers\HomeController::class, 'teachers'])->name('teachers');
+Route::get('/teachers/{id}', [\App\Http\Controllers\HomeController::class, 'teacher'])->name('teacher.show');
 Route::get('/students', [App\Http\Controllers\HomeController::class, 'students'])->name('students');
 Route::get('/journals', [App\Http\Controllers\HomeController::class, 'journals'])->name('journals');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');

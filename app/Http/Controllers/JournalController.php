@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Journal;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class JournalController extends Controller
 {
@@ -30,6 +31,10 @@ class JournalController extends Controller
             foreach ($request->photos as $photo) {
                 $path = $photo->store('photos',['disk' => 'public']);
                 $journal->photos()->create(['path' => $path]);
+                $img =Image::make(public_path('/storage/'.$journal->photos()->first()->path));
+                $img->resize(300, 225, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save(public_path('/storage/'.$journal->photos()->first()->path));
             }
         }
 
@@ -57,8 +62,12 @@ class JournalController extends Controller
 
         if ($request->hasFile('photos')) {
             foreach ($request->photos as $photo) {
-                $path = $photo->store('photos');
+                $path = $photo->store('photos',['disk' => 'public']);
                 $Journal->photos()->create(['path' => $path]);
+                $img =Image::make(public_path('/storage/'.$Journal->photos()->first()->path));
+                $img->resize(300, 225, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save(public_path('/storage/'.$Journal->photos()->first()->path));
             }
         }
 

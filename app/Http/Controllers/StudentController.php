@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class StudentController extends Controller
 {
@@ -30,6 +31,10 @@ class StudentController extends Controller
             foreach ($request->photos as $photo) {
                 $path = $photo->store('photos',['disk' => 'public']);
                 $student->photos()->create(['path' => $path]);
+                $img =Image::make(public_path('/storage/'.$student->photos()->first()->path));
+                $img->resize(300, 225, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save(public_path('/storage/'.$student->photos()->first()->path));
             }
         }
 
@@ -57,8 +62,12 @@ class StudentController extends Controller
 
         if ($request->hasFile('photos')) {
             foreach ($request->photos as $photo) {
-                $path = $photo->store('photos');
+                $path = $photo->store('photos',['disk' => 'public']);
                 $student->photos()->create(['path' => $path]);
+                $img =Image::make(public_path('/storage/'.$student->photos()->first()->path));
+                $img->resize(300, 225, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save(public_path('/storage/'.$student->photos()->first()->path));
             }
         }
 

@@ -73,6 +73,11 @@ body{
 
 .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
 
-
+.card{
+    background-color: #ece2e2;
+}
+.img_photo{
+    height: 15rem;width: 15rem
+}
 
 

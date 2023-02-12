@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Teacher;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class TeacherController extends Controller
 {
@@ -31,6 +32,10 @@ class TeacherController extends Controller
             foreach ($request->photos as $photo) {
                 $path = $photo->store('photos',['disk' => 'public']);
                 $Teacher->photos()->create(['path' => $path]);
+                $img =Image::make(public_path('/storage/'.$Teacher->photos()->first()->path));
+                $img->resize(300, 225, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save(public_path('/storage/'.$Teacher->photos()->first()->path));
             }
         }
 
@@ -55,12 +60,16 @@ class TeacherController extends Controller
             'description' => 'required',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5140',
         ]);
-        $Teacher->update($request->all());
+        $teacher->update($request->all());
 
         if ($request->hasFile('photos')) {
             foreach ($request->photos as $photo) {
-                $path = $photo->store('photos');
-                $Teacher->photos()->create(['path' => $path]);
+                $path = $photo->store('photos',['disk' => 'public']);
+                $teacher->photos()->create(['path' => $path]);
+                $img =Image::make(public_path('/storage/'.$teacher->photos()->first()->path));
+                $img->resize(300, 225, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save(public_path('/storage/'.$teacher->photos()->first()->path));
             }
         }
 

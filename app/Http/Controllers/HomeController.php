@@ -21,6 +21,7 @@ class HomeController extends Controller
         $teachers=Teacher::with('photos')->get();
         $journals=Journal::with('photos')->get();
         $students=Student::with('photos')->get();
+
         return view('home')->with(['students'=>$students,
             'teachers'=>$teachers,'journals'=>$journals]);
     }
@@ -35,6 +36,14 @@ class HomeController extends Controller
     public function journals(){
         $journals=Journal::with('photos')->paginate(6);
         return view('journals')->with(['journals'=>$journals]);
+    }
+    public function teacher($id)
+    {
+        $teacher = Teacher::find($id);
+        if (!$teacher) {
+            abort(404);
+        }
+        return view('teacher',compact('teacher'));
     }
     public function about(){
         return view('aboutUs');

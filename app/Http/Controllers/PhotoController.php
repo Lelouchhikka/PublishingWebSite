@@ -29,7 +29,7 @@ class PhotoController extends Controller
     public function destroy(Photo $photo)
     {
         $photo->delete();
-        return redirect()->route('photos.index');
+        return redirect()->back();
     }
     public function store(Request $request)
     {

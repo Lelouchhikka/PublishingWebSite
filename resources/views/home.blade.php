@@ -10,12 +10,14 @@
                 <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                     <div class="MultiCarousel-inner">
                         @foreach($teachers as $teacher)
+                            <a href="{{route('teacher.show',$teacher->id)}}">
                             <div class="item">
                                 <div class="border  w-75 h-100">
                                     <img src="{{asset('/storage/'.$teacher->photos()->first()->path)}}" class="card-img "/>
                                     <p>{{$teacher->name}}</p>
                                 </div>
                             </div>
+                            </a>
                         @endforeach
                     </div>
                     <button class="btn btn-primary leftLst"><</button>
