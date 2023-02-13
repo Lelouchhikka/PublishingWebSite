@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Description:</label>
-                        <input type="text" class="form-control" id="description" name="description" value="{{ $journal->description }}" required>
+                        <textarea  class="form-control" id="description" name="description" required>{{ $journal->description }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="photos">Add photos:</label>

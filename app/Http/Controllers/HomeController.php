@@ -45,6 +45,22 @@ class HomeController extends Controller
         }
         return view('teacher',compact('teacher'));
     }
+    public function student($id)
+    {
+        $student = Student::find($id);
+        if (!$student) {
+            abort(404);
+        }
+        return view('student',compact('student'));
+    }
+    public function journal($id)
+    {
+        $journal = Journal::find($id);
+        if (!$journal) {
+            abort(404);
+        }
+        return view('journal',compact('journal'));
+    }
     public function about(){
         return view('aboutUs');
     }

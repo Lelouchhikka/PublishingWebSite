@@ -33,6 +33,7 @@
                 <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                     <div class="MultiCarousel-inner">
                         @foreach($students as $student)
+                            <a href="{{route('student.show',$student->id)}}">
                             <div class="item">
                                 <div class="border  w-75 h-100">
                                     <img src="{{asset('/storage/'.$student->photos()->first()->path)}}" class="card-img "
@@ -40,6 +41,7 @@
                                     <p>{{$student->name}}</p>
                                 </div>
                             </div>
+                            </a>
                         @endforeach
                     </div>
                     <button class="btn btn-primary leftLst"><</button>
@@ -55,6 +57,7 @@
                 <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                     <div class="MultiCarousel-inner">
                         @foreach($journals as $journal)
+                            <a href="{{route('journal.show',$journal->id)}}">
                             <div class="item">
                                 <div class="border ">
                                     <img src="{{asset('/storage/'.$journal->photos()->first()->path)}}" class="card-img "
@@ -62,6 +65,7 @@
                                     <p>{{$journal->name}}</p>
                                 </div>
                             </div>
+                            </a>
                         @endforeach
                     </div>
                     <button class="btn btn-primary leftLst"><</button>

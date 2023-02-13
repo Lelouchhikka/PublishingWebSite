@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
                         <p><strong>Name:</strong> {{ $journal->name }}</p>
-                        <p><strong>Description:</strong> {{ $journal->description }}</p>
+                        <p><strong>Description:</strong> {!! nl2br($journal->description)!!}</p>
                     </div>
                 </div>
 

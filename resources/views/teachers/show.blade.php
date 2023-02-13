@@ -9,8 +9,8 @@
                     </div>
                     <div class="card-body">
                         <p><strong>Name:</strong> {{ $teacher->name }}</p>
-                        <p><strong>Description:</strong> {{ $teacher->description }}</p>
-                        <p><strong>Experience:</strong> {{ $teacher->experience }}</p>
+                        <p><strong>Description:</strong> {!! nl2br($teacher->description) !!}</p>
+                        <p><strong>Experience:</strong> {!! nl2br($teacher->experience)!!}</p>
                     </div>
                 </div>
 

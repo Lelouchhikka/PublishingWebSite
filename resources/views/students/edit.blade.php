@@ -18,7 +18,8 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Description:</label>
-                        <input type="text" class="form-control" id="description" name="description" value="{{ $student->description }}" required>
+                        <textarea  class="form-control" id="description" name="description" required>{{ $student->description }}</textarea>
+
                     </div>
                     <div class="form-group">
                         <label>Add photos</label>

@@ -8,8 +8,8 @@
                         <h4>Student Information</h4>
                     </div>
                     <div class="card-body">
-                        <p><strong>Name:</strong> {{ $student->name }}</p>
-                        <p><strong>Description:</strong> {{ $student->description }}</p>
+                        <p><strong>Name:</strong>{!! nl2br( $student->name)!!}</p>
+                        <p><strong>Description:</strong> {!! nl2br($student->description)!!}</p>
                     </div>
                 </div>
 
