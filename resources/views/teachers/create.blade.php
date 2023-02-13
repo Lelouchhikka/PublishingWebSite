@@ -12,12 +12,12 @@
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="description">Description:</label>
-                        <input type="text" class="form-control" id="description" name="description" multiple required>
+                        <label for="name">Description:</label>
+                        <textarea  class="form-control" id="description" name="description" required>{{ $teacher->description }}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="experience">Experience:</label>
-                        <input type="text" class="form-control" id="experience" name="experience" multiple required>
+                        <label for="name">Experience:</label>
+                        <textarea type="text" class="form-control" id="experience" name="experience" required>{{ $teacher->experience }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="photos">Photos:</label>

@@ -12,8 +12,8 @@
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="photos">Description:</label>
-                        <input type="text" class="form-control" id="description" name="description" multiple required>
+                        <label for="name">Description:</label>
+                        <textarea  class="form-control" id="description" name="description" required>{{ $journal->description }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="photos">Photos:</label>
