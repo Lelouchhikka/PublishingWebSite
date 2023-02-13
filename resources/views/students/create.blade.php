@@ -13,7 +13,7 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Description:</label>
-                        <textarea  class="form-control" id="description" name="description" required>{{ $student->description }}</textarea>
+                        <textarea  class="form-control" id="description" name="description" required></textarea>
 
                     </div>
                     <div class="form-group">
