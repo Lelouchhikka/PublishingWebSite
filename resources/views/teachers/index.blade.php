@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5">
                         <p>
-                            <a href="{{ route('teachers.create') }}" class="btn btn-success">Add Teacher</a>
+                            <a href="{{ route('teachers.create') }}" class="btn btn-success">Добавить учителя</a>
                         </p>
                         <table class="table">
                             <thead>
