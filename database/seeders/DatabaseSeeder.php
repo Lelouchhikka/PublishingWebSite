@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name'=>'Admin',
-            'email'=>'erasyl.kelman@gmail.com',
-            'password'=>Hash::make('>v,;JHJ:s^"3d#A@')
-        ]);
+//        DB::table('users')->insert([
+//            'name'=>'Admin',
+//            'email'=>'erasyl.kelman@gmail.com',
+//            'password'=>Hash::make('>v,;JHJ:s^"3d#A@')
+//        ]);
         DB::table('about_us')->insert([
             'description'=>'Hello'
         ]);
