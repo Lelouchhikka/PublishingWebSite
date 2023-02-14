@@ -101,6 +101,9 @@
                             <li class="nav-item  ">
                                 <a class="nav-link item_img" href="{{url('admin/'.'teachers')}}">Добавить учителя</a>
                             </li>
+                            <li class="nav-item  ">
+                                <a class="nav-link item_img" href="{{url('admin/'.'aboutUs')}}">Редактировать Контакты</a>
+                            </li>
                         @endif
                     </ul>
                 </div>

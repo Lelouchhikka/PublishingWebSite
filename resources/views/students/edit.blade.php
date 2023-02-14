@@ -5,30 +5,30 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Edit Student</h1>
+                <h1>Редактирование студента</h1>
                 <div class="ml-auto">
-                    <a href="{{ route('students.index') }}" class="btn btn-secondary">Back</a>
+                    <a href="{{ route('students.index') }}" class="btn btn-secondary">Назад</a>
                 </div>
                 <form action="{{ route('students.update', $student) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label for="name">Name:</label>
+                        <label for="name">ФИО:</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ $student->name }}" required>
                     </div>
                     <div class="form-group">
-                        <label for="name">Description:</label>
+                        <label for="name">Описание:</label>
                         <textarea  class="form-control" id="description" name="description" required>{{ $student->description }}</textarea>
 
                     </div>
                     <div class="form-group">
-                        <label>Add photos</label>
+                        <label>Добавить Фотографии</label>
                         <input type="file" class="form-control" id="photos" name="photos[]" multiple>
                     </div>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary">Обновить</button>
                 </form>
                 <br>
-                <label for="photos">Photos:</label>
+                <label for="photos">Фотографии:</label>
                 <div class="d-flex flex-wrap col-12">
                     @foreach($student->photos as $photo)
                         <div class="col-2 d-flex flex-column text-end">
@@ -37,7 +37,7 @@
                             <form action="{{ route('photos.destroy', $photo) }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger ">Delete</button>
+                                <button type="submit" class="btn btn-danger ">Удалить</button>
                             </form>
                         </div>
                     @endforeach

@@ -5,17 +5,17 @@
             <div class="col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Teacher Information</h4>
+                        <h4>Информация о учителе</h4>
                     </div>
                     <div class="card-body">
-                        <p><strong>Name:</strong> {{ $teacher->name }}</p>
-                        <p><strong>Description:</strong> {!! nl2br($teacher->description) !!}</p>
-                        <p><strong>Experience:</strong> {!! nl2br($teacher->experience)!!}</p>
+                        <p><strong>ФИО:</strong> {{ $teacher->name }}</p>
+                        <p><strong>Описание:</strong> {!! nl2br($teacher->description) !!}</p>
+                        <p><strong>Опыт работы:</strong> {!! nl2br($teacher->experience)!!}</p>
                     </div>
                 </div>
 
                 <div class="mt-4">
-                    <h4>Teacher Photos</h4>
+                    <h4>Фотографии учителя</h4>
                     <div class="row">
                         @foreach($teacher->photos as $photo)
                             <div class="col-md-4">

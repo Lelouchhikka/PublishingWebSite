@@ -20,5 +20,8 @@ class DatabaseSeeder extends Seeder
             'email'=>'erasyl.kelman@gmail.com',
             'password'=>Hash::make('>v,;JHJ:s^"3d#A@')
         ]);
+        DB::table('about_us')->insert([
+            'description'=>'Hello'
+        ]);
     }
 }

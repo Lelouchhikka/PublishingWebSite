@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
 use App\Models\Journal;
 use App\Models\Student;
 use App\Models\Teacher;
@@ -62,6 +63,10 @@ class HomeController extends Controller
         return view('journal',compact('journal'));
     }
     public function about(){
-        return view('aboutUs');
+        $str=AboutUs::all()->firstOrFail()->get()[0]->description;
+        return view('aboutUs',compact('str'));
+    }
+    public function editAbout(){
+
     }
 }

@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('/students', StudentController::class);
         Route::resource('/journals', \App\Http\Controllers\JournalController::class);
         Route::resource('/teachers', \App\Http\Controllers\TeacherController::class);
+        Route::resource('/aboutUs', \App\Http\Controllers\AboutUsController::class);
     });
 });
 Auth::routes([

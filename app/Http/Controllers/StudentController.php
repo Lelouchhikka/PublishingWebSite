@@ -58,6 +58,7 @@ class StudentController extends Controller
             'description' => 'required',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5140',
         ]);
+        dd($student);
         $student->update($request->all());
 
         if ($request->hasFile('photos')) {
