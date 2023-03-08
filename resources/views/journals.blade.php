@@ -13,7 +13,7 @@
                         <a href="{{route('journal.show',$journal->id)}}" class="link-dark text-decoration-none">
                                 <div class="card w-100">
                                         <img src="{{asset('/storage/'.$journal->photos()->first()->path)}}"
-                                             class="img-fluid "
+                                             class="img-fluid p-3"
                                         style="max-height: 200px;min-height: 200px;
                                             max-width: 150px;min-width: 150px"/>
 
