@@ -9,8 +9,8 @@
                 <div class="row">
                     <div
                     @foreach($students as $student)
-                        <div class="border">
-                        <div class="col-lg-2 d-flex justify-content-center text-center mt-3">
+
+                        <div class="col-lg-2 d-flex justify-content-center text-center border mt-3">
                         <a href="{{route('student.show',$student->id)}}" class="link-dark text-decoration-none">
                             <div class=" card w-100">
                                 <img src="{{asset('/storage/'.$student->photos()->first()->path)}}"
@@ -20,7 +20,6 @@
                                 <h3 class="card-title">{{$student->name}}</h3>
                             </div>
                         </a>
-                        </div>
                         </div>
                     @endforeach
 
