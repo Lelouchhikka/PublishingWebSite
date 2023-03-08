@@ -297,9 +297,7 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-.card-title {
-    word-wrap: break-word;
-}
+
 /* для устройств с шириной экрана меньше или равной 576px */
 @media (max-width: 576px) {
     .col-lg-2 {
