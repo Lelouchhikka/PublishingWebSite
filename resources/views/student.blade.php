@@ -11,7 +11,7 @@
                     <div class="row justify-content-center d-flex flex-wrap">
                         @foreach($student->photos as $photo)
                         <div class="col">
-                                <img src="{{ asset('/storage/'.$photo->path) }}" class="img_photo">
+                                <img src="{{ asset('/storage/'.$photo->path) }}" class="img_photo mt-1">
                         </div>
                         @endforeach
                     </div>
