@@ -9,7 +9,7 @@
                 <div class="row">
                         <div
                             @foreach($journals as $journal)
-                        <div class="col-lg-2 d-flex justify-content-center text-center mt-3 w-25">
+                        <div class="col-lg-2 d-flex justify-content-center text-center mt-3 w-20">
                         <a href="{{route('journal.show',$journal->id)}}" class="link-dark text-decoration-none">
                                 <div class="card w-100">
                                         <img src="{{asset('/storage/'.$journal->photos()->first()->path)}}"
