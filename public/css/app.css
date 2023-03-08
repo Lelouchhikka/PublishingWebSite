@@ -297,6 +297,40 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
+/* для устройств с шириной экрана меньше или равной 576px */
+@media (max-width: 576px) {
+    .col-lg-2 {
+        flex-basis: 50%;
+    }
+}
+
+/* для устройств с шириной экрана больше 576px и меньше или равной 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+    .col-lg-2 {
+        flex-basis: 33.33%;
+    }
+}
+
+/* для устройств с шириной экрана больше 768px и меньше или равной 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .col-lg-2 {
+        flex-basis: 25%;
+    }
+}
+
+/* для устройств с шириной экрана больше 992px и меньше или равной 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .col-lg-2 {
+        flex-basis: 20%;
+    }
+}
+
+/* для устройств с шириной экрана больше 1200px */
+@media (min-width: 1200px) {
+    .col-lg-2 {
+        flex-basis: 16.66%;
+    }
+}
 .img_photo{
     height: 15rem;
     width: 15rem;
