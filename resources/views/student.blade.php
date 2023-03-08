@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="m-4 text-center">
                     <h3 class="fw-bold">{{ $student->name }}</h3>
-                    <div class="row justify-content-center  ">
+                    <div class="row justify-content-center d-flex flex-nowrap">
                         @foreach($student->photos as $photo)
                         <div class="col">
                                 <img src="{{ asset('/storage/'.$photo->path) }}" class="img_photo">
