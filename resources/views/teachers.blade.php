@@ -15,7 +15,7 @@
                                         <img src="{{asset('/storage/'.$teacher->photos()->first()->path)}}"
                                              class="img-fluid p-3"
                                         style="max-height: 200px;min-height: 200px;
-                                            max-width: 150px;min-width: 150px"/>
+                                            min-width: 150px"/>
 
                                     <h3 class="card-title">{{$teacher->name}}</h3>
                                 </div>
