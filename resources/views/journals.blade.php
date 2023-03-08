@@ -17,7 +17,7 @@
                                         style="max-height: 200px;min-height: 200px;
                                             min-width: 150px"/>
 
-                                    <h3 class="card-title m-3">{{$journal->name}}</h3>
+                                    <h3 class="card-title p-3">{{$journal->name}}</h3>
                                 </div>
                         </a>
                         </div>
