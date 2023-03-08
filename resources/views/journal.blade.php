@@ -7,10 +7,12 @@
 
             <div class="card">
                 <div class="m-4">
-                    <div class="row justify-content-center text-center ">
+                    <div class="row justify-content-center text-center d-flex flex-wrap">
                         <h3 class="fw-bold"> {{ $journal->name }}</h3>
                         @foreach($journal->photos as $photo)
-                                <img src="{{ asset('/storage/'.$photo->path) }}" class="img_photo">
+                            <div class="col">
+                                <img src="{{ asset('/storage/'.$photo->path) }}" class="img_photo mt-1">
+                            </div>
                         @endforeach
                     </div>
                 </div>

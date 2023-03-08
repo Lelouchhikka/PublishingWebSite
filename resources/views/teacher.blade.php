@@ -7,7 +7,7 @@
 
             <div class="card">
                 <div class="m-4">
-                    <div class="row justify-content-center  text-center">
+                    <div class="row justify-content-center  text-center d-flex flex-wrap">
                         <h3 class="fw-bold"> {{ $teacher->name }}</h3>
                         @foreach($teacher->photos as $photo)
                             <div class="col">
