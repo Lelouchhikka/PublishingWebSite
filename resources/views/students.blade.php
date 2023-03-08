@@ -14,8 +14,9 @@
                         <a href="{{route('student.show',$student->id)}}" class="link-dark text-decoration-none">
                             <div class=" card w-100">
                                 <img src="{{asset('/storage/'.$student->photos()->first()->path)}}"
-                                     class="card-img "
-                                     style="max-height: 200px;min-height: 200px"/>
+                                     class="img-fluid p-3 "
+                                     style="max-height: 200px;min-height: 200px;
+                                            max-width: 150px;min-width: 150px"/>
 
                                 <h3 class="card-title">{{$student->name}}</h3>
                             </div>
