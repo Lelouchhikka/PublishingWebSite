@@ -13,7 +13,7 @@
                         <a href="{{route('student.show',$student->id)}}" class="link-dark text-decoration-none">
                             <div class=" card w-100">
                                 <img src="{{asset('/storage/'.$student->photos()->first()->path)}}"
-                                     class="img-fluid p-3 img_photo"
+                                     class="card-img "
                                      style="max-height: 200px;min-height: 200px"/>
 
                                 <h3 class="card-title">{{$student->name}}</h3>
