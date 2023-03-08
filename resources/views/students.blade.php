@@ -10,7 +10,7 @@
                     <div
                     @foreach($students as $student)
 
-                        <div class="col-lg-2 d-flex justify-content-center text-center border bg-white mt-3">
+                        <div class="col-lg-2 d-flex justify-content-center text-center mt-3">
                         <a href="{{route('student.show',$student->id)}}" class="link-dark text-decoration-none">
                             <div class=" card w-100">
                                 <img src="{{asset('/storage/'.$student->photos()->first()->path)}}"
