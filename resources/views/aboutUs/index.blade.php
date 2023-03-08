@@ -7,11 +7,13 @@
                             <thead>
                             <tr>
                                 <th>Описание</th>
+                                <th>Контакты</th>
                             </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{{ $aboutUs->description }}</td>
+                                    <td>{!! nl2br( $aboutUs->description) !!}</td>
+                                    <td>{!! nl2br($aboutUs->contacts)!!}</td>
                                 </tr>
                             </tbody>
                         </table>

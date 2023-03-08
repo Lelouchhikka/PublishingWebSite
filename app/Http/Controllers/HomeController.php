@@ -66,7 +66,9 @@ class HomeController extends Controller
         $str=AboutUs::all()->firstOrFail()->get()[0]->description;
         return view('aboutUs',compact('str'));
     }
-    public function editAbout(){
+    public function contacts(){
+        $str=AboutUs::all()->firstOrFail()->get()[0]->contacts;
 
+        return view('contacts',compact('str'));
     }
 }

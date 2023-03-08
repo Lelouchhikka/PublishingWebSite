@@ -8,7 +8,8 @@
                         <h4>Конткаты</h4>
                     </div>
                     <div class="card-body">
-                        <p><strong>Описание:</strong> {!! nl2br($aboutUs->description)!!}</p>
+                        <p><strong>О нас:</strong> {c$aboutUs->description)!!}</p>
+                        <p><strong>Контакты:</strong> {!! nl2br($aboutUs->contacts)!!}</p>
                     </div>
                 </div>
             </div>

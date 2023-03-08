@@ -23,7 +23,6 @@ class TeacherController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'experience'=>'required',
             'description' => 'required',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5140',
         ]);
@@ -56,7 +55,6 @@ class TeacherController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'experience'=>'required',
             'description' => 'required',
             'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5140',
         ]);
@@ -67,7 +65,7 @@ class TeacherController extends Controller
                 $path = $photo->store('photos',['disk' => 'public']);
                 $teacher->photos()->create(['path' => $path]);
                 $img =Image::make(public_path('/storage/'.$teacher->photos()->first()->path));
-                $img->resize(300, 225, function ($constraint) {
+                $img->resize(794, 1123, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save(public_path('/storage/'.$teacher->photos()->first()->path));
             }

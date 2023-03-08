@@ -32,7 +32,8 @@ class AboutUsController extends Controller
     public function update(Request $request, AboutUs $aboutUs): \Illuminate\Http\RedirectResponse
     {
         $request->validate([
-            'description' => 'required',
+            'description' ,
+            'contacts' ,
         ]);
        AboutUs::all()->firstOrFail('id',1)->update($request->all());
         return redirect()->route('aboutUs.index');

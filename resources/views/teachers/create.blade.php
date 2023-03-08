@@ -16,10 +16,6 @@
                         <textarea  class="form-control" id="description" name="description" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="name">Опыт работы:</label>
-                        <textarea type="text" class="form-control" id="experience" name="experience" required></textarea>
-                    </div>
-                    <div class="form-group">
                         <label for="photos">Фотографии:</label>
                         <input type="file" class="form-control" id="photos" name="photos[]" multiple required>
                     </div>

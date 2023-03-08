@@ -5,47 +5,26 @@
         <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-facebook-f"></i
-                ></a>
+
 
             <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-twitter"></i
-                ></a>
+            <div class="btn btn-outline-light btn-floating m-1" href="#" role="button"
+            >
+                 <i class="fa fa-envelope" aria-hidden="true"></i>
+            </div>ulbosynsakyp@gmail.com
 
-            <!-- Google -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-google"></i
-                ></a>
 
             <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-instagram"></i
+            <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/asylmura_press?igshid=YmMyMTA2M2Y=" role="button"
+            >Instagram <i class="fab fa-instagram"></i
                 ></a>
 
-            <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-linkedin-in"></i
-                ></a>
 
-            <!-- Github -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-            ><i class="fab fa-github"></i
-                ></a>
         </section>
         <!-- Section: Social media -->
 
 
 
-        <!-- Section: Text -->
-        <section class="mb-4">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-                eum harum corrupti dicta, aliquam sequi voluptate quas.
-            </p>
-        </section>
         <!-- Section: Text -->
 
         <!-- Section: Links -->
@@ -56,8 +35,8 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 Copyright:
-        <a class="text-white" >Asylmura</a>
+        Все права защищены  2023
+        <a class="text-white" >"Редакция Асылмұра"</a>
     </div>
     <!-- Copyright -->
 </footer>

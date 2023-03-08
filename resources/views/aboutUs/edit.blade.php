@@ -13,11 +13,14 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label for="name">Описание:</label>
+                        <label for="name">О нас:</label>
                         <textarea  class="form-control" id="description" name="description" required>{{ $aboutUs->description }}</textarea>
+                        <label for="name">Контакты:</label>
+                        <textarea  class="form-control" id="contacts" name="contacts" required>{{ $aboutUs->contacts }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Обновить</button>
                 </form>
+
                 <br>
 
             </div>

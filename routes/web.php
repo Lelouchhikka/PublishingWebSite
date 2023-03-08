@@ -41,3 +41,4 @@ Route::get('/journal/{id}', [\App\Http\Controllers\HomeController::class, 'journ
 Route::get('/students', [App\Http\Controllers\HomeController::class, 'students'])->name('students');
 Route::get('/journals', [App\Http\Controllers\HomeController::class, 'journals'])->name('journals');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+Route::get('/contacts', [App\Http\Controllers\HomeController::class, 'contacts'])->name('contacts');

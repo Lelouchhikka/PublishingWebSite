@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-nav shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="{{url("/images/logo_text.png")}}" style="display: inline-block; width: 10rem;height: 4rem">
                 </a>
 
                 <ul class="navbar-nav ms-auto">
@@ -89,7 +89,10 @@
                             <a class="nav-link item_img" href="{{route('journals')}}">ВЫПУСКИ</a>
                         </li>
                         <li class="nav-item  ">
-                            <a class="nav-link item_img" href="{{route('about')}}">КОНТАНКТЫ</a>
+                            <a class="nav-link item_img" href="{{route('about')}}">О НАС</a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a class="nav-link item_img" href="{{route('contacts')}}">КОНТАКТЫ</a>
                         </li>
                         @if(Auth::check())
                             <li class="nav-item  ">

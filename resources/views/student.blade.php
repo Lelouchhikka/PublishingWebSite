@@ -2,16 +2,18 @@
 
 @section('content')
     <div class="container ">
-        <div class="row justify-content-center text-start ">
+        <div class="row justify-content-center text-center ">
             <div class="separator">Лучший ученик</div>
 
             <div class="card">
-                <div class="m-4">
+                <div class="m-4 text-center">
                     <h3 class="fw-bold">{{ $student->name }}</h3>
                     <div class="row justify-content-center  ">
+                        <div class="col">
                         @foreach($student->photos as $photo)
                                 <img src="{{ asset('/storage/'.$photo->path) }}" class="img_photo">
                         @endforeach
+                        </div>
                     </div>
                 </div>
 
