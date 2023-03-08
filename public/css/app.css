@@ -297,26 +297,6 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-.grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
-}
-
-.grid-item {
-    margin-bottom: 20px;
-}
-
-.card {
-    height: 100%;
-}
-
-.card-title {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-}
 
 /* для устройств с шириной экрана меньше или равной 576px */
 @media (max-width: 576px) {
