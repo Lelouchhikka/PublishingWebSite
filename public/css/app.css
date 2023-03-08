@@ -297,7 +297,10 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-
+img_photo{
+    height: 15rem;
+    width: 15rem;
+}
 img,
 svg {
   vertical-align: middle;
