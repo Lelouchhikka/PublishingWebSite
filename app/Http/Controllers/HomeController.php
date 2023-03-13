@@ -64,11 +64,11 @@ class HomeController extends Controller
     }
     public function about(){
         $str=AboutUs::all()->firstOrFail()->get()[0]->description;
-        return view('aboutUs',compact('str'));
+        return view('contacts',compact('str'));
     }
     public function contacts(){
         $str=AboutUs::all()->firstOrFail()->get()[0]->contacts;
 
-        return view('contacts',compact('str'));
+        return view('aboutUs',compact('str'));
     }
 }
